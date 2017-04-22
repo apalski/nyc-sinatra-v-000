@@ -7,6 +7,7 @@ ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
   :database => "db/nyc#{ENV['SINATRA_ENV']}.sqlite"
 )
+require 'pry'
 
 require_relative "../app/controllers/application_controller.rb"
 
