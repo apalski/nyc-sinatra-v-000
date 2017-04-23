@@ -29,7 +29,7 @@ describe FiguresController do
   it "allows you to create a new figure with a title" do
     visit '/figures/new'
     fill_in :figure_name, :with => "Doctor Who"
-    #check "title_#{Title.first.id}"
+    check "title_#{Title.first.id}"
     click_button "Create New Figure"
     figure = Figure.last
     expect(Figure.all.count).to eq(3)
@@ -40,7 +40,7 @@ describe FiguresController do
   it "allows you to create a new figure with a landmark" do
     visit '/figures/new'
     fill_in :figure_name, :with => "Doctor Who"
-    #check "landmark_#{Landmark.first.id}"
+    check "landmark_#{Landmark.first.id}"
     click_button "Create New Figure"
     figure = Figure.last
     expect(Figure.all.count).to eq(3)
