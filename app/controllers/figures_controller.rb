@@ -1,7 +1,6 @@
 
 class FiguresController < ApplicationController
 
-
 	get '/figures' do
 		@figure = Figure.all
 		erb :'figures/index'
@@ -15,8 +14,6 @@ class FiguresController < ApplicationController
 
 	get '/figures/:id' do
 		@figure = Figure.find_by_id(params[:id])
-		# @title = Title.all
-		# @landmark = Landmark.all
 		erb :'figures/show'
 	end
 
